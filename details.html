@@ -152,46 +152,51 @@
 </section>
 
 <!-- Firebase Integration -->
+<script src = "./Assets/js/email.js"></script>
 <script type="module" src="./Assets/js/firebase.js"></script>
 <script type="module">
     import { db, collection, addDoc } from "./Assets/js/firebase.js";
 
     document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("booking-form");
+    const form = document.getElementById("booking-form");
 
-        form.addEventListener("submit", async function (e) {
-            e.preventDefault();
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-            const firstName = document.getElementById("first-name").value;
-            const lastName = document.getElementById("last-name").value;
-            const email = document.getElementById("email").value;
-            const phone = document.getElementById("phone").value;
-            const date = document.getElementById("date").value;
-            const tour = document.getElementById("tour").value;
-            const hotel = document.getElementById("hotel").value;
+        const firstName = document.getElementById("first-name").value;
+        const lastName = document.getElementById("last-name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const date = document.getElementById("date").value;
+        const tour = document.getElementById("tour").value;
+        const hotel = document.getElementById("hotel").value;
 
-            try {
-                await addDoc(collection(db, "bookings"), {
-                    firstName,
-                    lastName,
-                    email,
-                    phone,
-                    date,
-                    tour,
-                    hotel,
-                    timestamp: new Date()
-                });
-                alert("Booking Successful!");
-                form.reset();
-                window.location.href = "/booked.html";  // Redirect after success
-            } catch (error) {
-                console.error("Error adding document:", error);
-                alert("Booking Failed!");
-            }
-        });
+        try {
+            const docRef = await addDoc(collection(db, "bookings"), {
+                firstName,
+                lastName,
+                email,
+                phone,
+                date,
+                tour,
+                hotel,
+                timestamp: new Date()
+            });
+
+            const referenceId = docRef.id; // Unique Firebase Document ID
+
+            // Redirect with details for the next page
+            const bookingDetails = `booked.html?ref=${referenceId}&firstName=${encodeURIComponent(firstName)}&lastName=${encodeURIComponent(lastName)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&date=${encodeURIComponent(date)}&tour=${encodeURIComponent(tour)}&hotel=${encodeURIComponent(hotel)}`;
+
+            window.location.href = bookingDetails;
+        } catch (error) {
+            console.error("Error adding document:", error);
+            alert("Booking Failed!");
+        }
     });
+});
+
 </script>
-<script src = "./Assets/js/email.js"></script>
 <script src="./Assets/js/jquery.js"></script>
 <script src="./Assets/js/bootstrap.min.js"></script>
 </body>

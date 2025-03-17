@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="./Assets/Images/jumbo-image.png">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 </head>
 <body>
     <!--Navbar Section-->
@@ -53,14 +55,14 @@
         <P>LOCATION <i class="fa fa-globe" aria-hidden="true"></i> : COIMBATORE, TAMILNADU</P>
     </div>
 <div class="container bg-light p-5">
-    <form class="row g-3">
+    <form class="row g-3" id="contact-form">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
           <input type="email" class="form-control" id="inputEmail4">
         </div>
         <div class="col-md-6">
-          <label for="Alternateemail4" class="form-label">Alternate Email</label>
-          <input type="email" class="form-control" id="Alternateemail4">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name">
         </div>
         <div class="col-12">
           <label for="inputAddress" class="form-label">Address</label>
@@ -74,13 +76,13 @@
           <label for="inputCity" class="form-label">City</label>
           <input type="text" class="form-control" id="inputCity">
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <label for="inputState" class="form-label">State</label>
           <select id="inputState" class="form-select">
             <option selected>Choose...</option>
             <option>...</option>
           </select>
-        </div>
+        </div> -->
         <div class="col-md-2">
           <label for="inputZip" class="form-label">Zip</label>
           <input type="text" class="form-control" id="inputZip">
@@ -136,7 +138,27 @@
                 </div>
               </footer>
         </section>
-        
+        <script>
+          
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  emailjs.init("nT2LwUy7Jqv_h6pz_"); // Replace with your EmailJS User ID
+
+    event.preventDefault();
+
+    const serviceID = "service_36lma2s";   // Replace with your Email.js Service ID
+    const templateID = "template_wclcp9h"; // Replace with your Email.js Template ID
+
+    emailjs.sendForm(serviceID, templateID, this)
+    .then(response => {
+        alert("Message sent successfully!");
+        console.log("SUCCESS!", response.status, response.text);
+    }, error => {
+        alert("Failed to send message. Please try again.");
+        console.error("FAILED...", error);
+    });
+});
+        </script>
         <script src="./Assets/js/jquery.js"></script>
         <script src="./Assets/js/bootstrap.min.js"></script>
         </body>
