@@ -419,6 +419,11 @@
     margin: 5px 0px 15px;
 }
 
+.dropdown{
+    width: 100%;
+
+}
+
 .btn1
 {
     text-align: center;
