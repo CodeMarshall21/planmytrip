@@ -6,12 +6,12 @@ import { getFirestore, collection, addDoc } from "https://www.gstatic.com/fireba
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA7i2W7CvUZbRKtlp_jSb0PAMZAbHALOc4",
-  authDomain: "planmytrip-5e82a.firebaseapp.com",
-  projectId: "planmytrip-5e82a",
-  storageBucket: "planmytrip-5e82a.firebasestorage.app",
-  messagingSenderId: "109866858254",
-  appId: "1:109866858254:web:21986bafcf705deb9c495f"
+    apiKey: "AIzaSyBrkwdoIk4DFavf4wia-j_mTTC-fOs-uow",
+    authDomain: "planmytrip-8b3ba.firebaseapp.com",
+    projectId: "planmytrip-8b3ba",
+    storageBucket: "planmytrip-8b3ba.firebasestorage.app",
+    messagingSenderId: "450578397626",
+    appId: "1:450578397626:web:85fa66fff35c22a5674583"
 };
 
 // Initialize Firebase
