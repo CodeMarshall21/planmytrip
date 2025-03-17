@@ -45,73 +45,73 @@
     </section>
 <!---delay form-->
 <section id="delay-form">
-<div class="regform">
-    <h3 class="define8">Booking Form</h3>
-    <div class="form">
-        <form action="">
-            <div class="input">
-                <label for="first-name">First Name</label>
-                <input type="text" placeholder="First Name" id="first-name">
-            </div>
-            <div class="input">
-                <label for="last-name">Last Name</label> 
-                <input type="text" placeholder="Last Name" id="last-name">
-            </div>
-            <div class="input">
-                <label for="email">Email</label>
-                <input type="email" placeholder="Email" id="email">
-            </div>
-            <div class="input">
-                <label for="phone">Contact</label>
-                <input type="tel" placeholder="Phone Number" id="phone">
-            </div>
-            <div class="input">
-                <label for="date">Date</label>
-                <input type="date" id="date">
-            </div>
-            <div class="input">
-                <label for="tour">Tour</label>
-                <select id="tour" class = "dropdown">
-                    <option value = "Badrinath Temple">Badrinath Temple</option>
-                    <option value = "Bangalore">Bangalore</option>
-                    <option value = "Goa">Goa</option>
-                    <option value = "Mysore">Mysore</option>
-                    <option value = "Taj Mahal">Taj Mahal</option>
-                    <option value = "Varkala">Varkala</option>
-                    <option value = "Wonderla">Wonderla</option>
-                    <option value = "Andaman & Nicobar">Andaman & Nicobar</option>
-                    <option value = "Andhra Pradesh">Andhra Pradesh</option>
-                    <option value = "Arunachal Pradesh">Arunachal Pradesh</option>
-                    <option value = "Bihar">Bihar</option>
-                    <option value = "Chandigarh">Chandigarh</option>
-                    <option value = "Delhi">Delhi</option>
-                    <option value = "Guwahati">Guwahati</option>
-                    <option value = "Haryana">Haryana</option>
-                    <option value = "Himachal Pradesh">Himachal Pradesh</option>
-                    <option value = "Kerala">Kerala</option>
-                    <option value = "Ladakh">Ladakh</option>
-                    <option value = "Lakshadweep">Lakshadweep</option>
-                    <option value = "Tamilnadu">Tamilnadu</option>
-                    <option value = "West Bengal">West Bengal</option>
-                </select>
-            </div>
-            <div class="input">
-                <label for="hotel">Hotel</label>
-                <select id="hotel" class = "dropdown">
-                    <option value = "Resort 1">Resort 1</option>
-                    <option value = "Resort 2">Resort 2</option>
-                    <option value = "Resort 3">Resort 3</option>
-                    <option value = "Resort 4">Resort 4</option>
-                    <option value = "Resort 5">Resort 5</option>
-                    <option value = "Resort 6">Resort 6</option>
-                </select>
-            </div>
-            <div class="btn1">
-                <button type="button"><a href="/booked.html"> Book Now <i class="fa fa-circle" aria-hidden="true"></i></a></button>
-            </div>
-        </form>
-    </div>
-</div>
+  <div class="regform">
+      <h3 class="define8">Booking Form</h3>
+      <div class="form">
+          <form id="booking-form">  <!-- ADDED ID HERE -->
+              <div class="input">
+                  <label for="first-name">First Name</label>
+                  <input type="text" placeholder="First Name" id="first-name" required>
+              </div>
+              <div class="input">
+                  <label for="last-name">Last Name</label> 
+                  <input type="text" placeholder="Last Name" id="last-name" required>
+              </div>
+              <div class="input">
+                  <label for="email">Email</label>
+                  <input type="email" placeholder="Email" id="email" required>
+              </div>
+              <div class="input">
+                  <label for="phone">Contact</label>
+                  <input type="tel" placeholder="Phone Number" id="phone" required>
+              </div>
+              <div class="input">
+                  <label for="date">Date</label>
+                  <input type="date" id="date" required>
+              </div>
+              <div class="input">
+                  <label for="tour">Tour</label>
+                  <select id="tour" class="dropdown">
+                      <option value="Badrinath Temple">Badrinath Temple</option>
+                      <option value="Bangalore">Bangalore</option>
+                      <option value="Goa">Goa</option>
+                      <option value="Mysore">Mysore</option>
+                      <option value="Taj Mahal">Taj Mahal</option>
+                      <option value="Varkala">Varkala</option>
+                      <option value="Wonderla">Wonderla</option>
+                      <option value="Andaman & Nicobar">Andaman & Nicobar</option>
+                      <option value="Andhra Pradesh">Andhra Pradesh</option>
+                      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                      <option value="Bihar">Bihar</option>
+                      <option value="Chandigarh">Chandigarh</option>
+                      <option value="Delhi">Delhi</option>
+                      <option value="Guwahati">Guwahati</option>
+                      <option value="Haryana">Haryana</option>
+                      <option value="Himachal Pradesh">Himachal Pradesh</option>
+                      <option value="Kerala">Kerala</option>
+                      <option value="Ladakh">Ladakh</option>
+                      <option value="Lakshadweep">Lakshadweep</option>
+                      <option value="Tamilnadu">Tamilnadu</option>
+                      <option value="West Bengal">West Bengal</option>
+                  </select>
+              </div>
+              <div class="input">
+                  <label for="hotel">Hotel</label>
+                  <select id="hotel" class="dropdown">
+                      <option value="Resort 1">Resort 1</option>
+                      <option value="Resort 2">Resort 2</option>
+                      <option value="Resort 3">Resort 3</option>
+                      <option value="Resort 4">Resort 4</option>
+                      <option value="Resort 5">Resort 5</option>
+                      <option value="Resort 6">Resort 6</option>
+                  </select>
+              </div>
+              <div class="btn1">
+                  <button type="submit">Book Now <i class="fa fa-circle" aria-hidden="true"></i></button>
+              </div>
+          </form>
+      </div>
+  </div>
 </section>
 
 <!--footer-->
@@ -149,6 +149,46 @@
       </footer>
 </section>
 
+<!-- Firebase Integration -->
+<script type="module" src="./Assets/js/firebase.js"></script>
+<script type="module">
+    import { db, collection, addDoc } from "./Assets/js/firebase.js";
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("booking-form");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const firstName = document.getElementById("first-name").value;
+            const lastName = document.getElementById("last-name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const date = document.getElementById("date").value;
+            const tour = document.getElementById("tour").value;
+            const hotel = document.getElementById("hotel").value;
+
+            try {
+                await addDoc(collection(db, "bookings"), {
+                    firstName,
+                    lastName,
+                    email,
+                    phone,
+                    date,
+                    tour,
+                    hotel,
+                    timestamp: new Date()
+                });
+                alert("Booking Successful!");
+                form.reset();
+                window.location.href = "/booked.html";  // Redirect after success
+            } catch (error) {
+                console.error("Error adding document:", error);
+                alert("Booking Failed!");
+            }
+        });
+    });
+</script>
 <script src="./Assets/js/jquery.js"></script>
 <script src="./Assets/js/bootstrap.min.js"></script>
 </body>
