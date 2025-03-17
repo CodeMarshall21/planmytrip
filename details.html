@@ -7,10 +7,13 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Ryuu">
     <title>Plan My Path</title>
+    <title>Plan My Path</title>
     <link rel="stylesheet" href="./Assets/css/style.css">
     <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="./Assets/Images/jumbo-image.png">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 </head>
@@ -114,8 +117,81 @@
           </form>
       </div>
   </div>
+  <div class="regform">
+      <h3 class="define8">Booking Form</h3>
+      <div class="form">
+          <form id="booking-form">  <!-- ADDED ID HERE -->
+              <div class="input">
+                  <label for="first-name">First Name</label>
+                  <input type="text" placeholder="First Name" id="first-name" required>
+              </div>
+              <div class="input">
+                  <label for="last-name">Last Name</label> 
+                  <input type="text" placeholder="Last Name" id="last-name" required>
+              </div>
+              <div class="input">
+                  <label for="email">Email</label>
+                  <input type="email" placeholder="Email" id="email" required>
+              </div>
+              <div class="input">
+                  <label for="phone">Contact</label>
+                  <input type="tel" placeholder="Phone Number" id="phone" required>
+              </div>
+              <div class="input">
+                  <label for="date">Date</label>
+                  <input type="date" id="date" required>
+              </div>
+              <div class="input">
+                  <label for="tour">Tour</label>
+                  <select id="tour" class="dropdown">
+                      <option value="Badrinath Temple">Badrinath Temple</option>
+                      <option value="Bangalore">Bangalore</option>
+                      <option value="Goa">Goa</option>
+                      <option value="Mysore">Mysore</option>
+                      <option value="Taj Mahal">Taj Mahal</option>
+                      <option value="Varkala">Varkala</option>
+                      <option value="Wonderla">Wonderla</option>
+                      <option value="Andaman & Nicobar">Andaman & Nicobar</option>
+                      <option value="Andhra Pradesh">Andhra Pradesh</option>
+                      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                      <option value="Bihar">Bihar</option>
+                      <option value="Chandigarh">Chandigarh</option>
+                      <option value="Delhi">Delhi</option>
+                      <option value="Guwahati">Guwahati</option>
+                      <option value="Haryana">Haryana</option>
+                      <option value="Himachal Pradesh">Himachal Pradesh</option>
+                      <option value="Kerala">Kerala</option>
+                      <option value="Ladakh">Ladakh</option>
+                      <option value="Lakshadweep">Lakshadweep</option>
+                      <option value="Tamilnadu">Tamilnadu</option>
+                      <option value="West Bengal">West Bengal</option>
+                  </select>
+              </div>
+              <div class="input">
+                  <label for="hotel">Hotel</label>
+                  <select id="hotel" class="dropdown">
+                      <option value="Resort 1">Resort 1</option>
+                      <option value="Resort 2">Resort 2</option>
+                      <option value="Resort 3">Resort 3</option>
+                      <option value="Resort 4">Resort 4</option>
+                      <option value="Resort 5">Resort 5</option>
+                      <option value="Resort 6">Resort 6</option>
+                  </select>
+              </div>
+              <div class="btn1">
+                  <button type="submit">Book Now <i class="fa fa-circle" aria-hidden="true"></i></button>
+              </div>
+          </form>
+      </div>
+  </div>
 </section>
 
+<!--footer-->
+<section id="footer">
+    <footer class="footer1 text-light pb-4 pt-5">
+        <div class="container text-center text-md-left">
+          <div class="row text-center text-md-left">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
 <!--footer-->
 <section id="footer">
     <footer class="footer1 text-light pb-4 pt-5">
